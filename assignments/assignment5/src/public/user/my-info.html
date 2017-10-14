@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>Your Profile</h1>
+    </div>
+  </div>
+  <div ng-if="myInfoCtrl.registered">
+    <div class="row">
+      <div class="col-md-2">First Name:</div>
+      <div class="col-md-4">{{myInfoCtrl.userInfo.firstName}}</div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">Last Name:</div>
+      <div class="col-md-4">{{myInfoCtrl.userInfo.lastName}}</div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">Email:</div>
+      <div class="col-md-4">{{myInfoCtrl.userInfo.email}}</div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">Phone:</div>
+      <div class="col-md-4">{{myInfoCtrl.userInfo.phone}}</div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">Favorite Dish:</div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="menu-item-description">
+          <img class="img-responsive" width="250" height="150"
+               ng-src="{{myInfoCtrl.basePath}}/images/{{myInfoCtrl.dishInfo.short_name}}.jpg">
+          <h3 class="menu-item-title">{{myInfoCtrl.dishInfo.name}}</h3>
+          <p class="menu-item-details">{{myInfoCtrl.dishInfo.description}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row" ng-if="!myInfoCtrl.registered">
+    <div class="col-md-12">
+    Not Signed Up Yet. <a ui-sref="public.signUp">Sign up Now!</a>
+    </div>
+  </div>
+</div>

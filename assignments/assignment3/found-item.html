@@ -1,0 +1,7 @@
+<div ng-repeat="item in list.foundItems">
+    <span>{{ item }}</span>
+    <button class="btn btn-primary"
+            ng-click="list.onRemove({index: $index});">
+        Don't want this one!
+    </button>
+</div>

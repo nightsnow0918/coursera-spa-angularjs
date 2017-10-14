@@ -1,0 +1,13 @@
+<div ng-repeat="item in $ctrl.items" class="item-detail" style="margin-bottom:3px">
+  <div class="item-title">[{{item.short_name}}] {{ item.name }}</div>
+  <div class="item-body">
+    <div class="item-property">Description: {{item.description}}</div>
+    <div class="item-property">Price: {{item.price_small}}~{{item.price_large}}</div>
+    <div class="item-property" v-if="item.small_portion_name">
+      small portion: {{item.small_portion_name}}
+    </div>
+    <div class="item-property" v-if="item.large_portion_name">
+      large portion: {{item.large_portion_name}}
+    </div>
+  </div>
+</div>

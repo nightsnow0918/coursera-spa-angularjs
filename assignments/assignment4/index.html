@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Assignment 4</title>
+  <style media="screen">
+    .item-detail {
+      max-width: 50%;
+      border: 1px solid lightgray;
+      border-radius: 5px;
+      margin-top: 3px;
+      padding: 10px 10px 10px 10px;
+    }
+    .item-body {
+      padding: 5px 5px 5px 5px;
+    }
+    .item-title{
+      padding: 3px 3px 3px 3px;
+      font-size: 20px;
+    }
+
+    .item-property {
+      padding: 3px 3px 3px 3px;
+    }
+    .clickable{
+    }
+    .clickable:hover {
+      cursor: pointer;
+      color: blue;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body ng-app="MenuApp">
+  <h1>Welcome to the restaurant!!</h1>
+
+  <ui-view></ui-view>
+
+  <!-- Libraries -->
+  <script src="lib/angular.min.js"></script>
+  <script src="lib/angular-ui-router.min.js"></script>
+
+  <!-- Modules -->
+  <script src="src/menuapp.module.js" charset="utf-8"></script>
+  <script src="src/data.module.js" charset="utf-8"></script>
+
+  <!-- Artifacts -->
+  <script src="src/menudata.service.js" charset="utf-8"></script>
+  <script src="src/menuapp.controller.js" charset="utf-8"></script>
+  <script src="src/items.controller.js" charset="utf-8"></script>
+  <script src="src/categories.component.js" charset="utf-8"></script>
+  <script src="src/items.component.js" charset="utf-8"></script>
+
+  <!-- Routes -->
+  <script src="src/routes.js" charset="utf-8"></script>
+</body>
+</html>
